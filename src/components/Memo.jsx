@@ -1,5 +1,10 @@
-// this is memo + use callback 
+// this is memo + use callback
 // in us ecallback ma , jaisy he data ki value update hoti h then wo call bcak k function wo update ho jata h
+// use callback work with complex function
+
+// use Memo
+// useMemo work with the single value
+// usememo can able to store the vakue of hook an also able to return
 
 import React, { useState, useCallback } from 'react'
 import Memo2 from './Memotest';
