@@ -12,7 +12,7 @@ function Header() {
             </button>
 
     <a class="navbar-brand" href="#">
-      <h4 class="font-weight-bold">TRSTORE</h4>
+      <h4 class="font-weight-bold">TR<span className='text-danger'>STORE</span></h4>
     </a>
 
     <ul class="navbar-nav ml-auto d-block d-md-none">
@@ -24,7 +24,7 @@ function Header() {
     <div class="collapse navbar-collapse">
       <form class="form-inline my-2 my-lg-0 mx-auto">
         <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search" />
-        <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="bx bx-search"></i></button>
+        <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="bx bx-search"></i></button>
       </form>
 
       <ul class="navbar-nav">

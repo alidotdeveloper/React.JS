@@ -7,7 +7,7 @@ function Homesection(props) {
         
             <div className='col product-cart'>
               <img src={props.img} width={200} alt="product"></img>
-              <h2>{props.title}</h2>
+              <h2 className='h2'>{props.title}</h2>
               <p> Price: {props.price}</p>
                   <button className='btn btn-danger'>Add to cart</button>
                   
