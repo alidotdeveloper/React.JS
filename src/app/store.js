@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import addtodo from "../addtocart/cart/Cardslice";
-import removetodo from "../addtocart/cart/Cardslice";
+import cardslice from "../addtotodo/cart/card-slice";
 
 const store = configureStore({
-  reducer: addtodo,
-  removetodo,
+  reducer: {
+    cart: cardslice,
+  },
 });
 
 export default store;
