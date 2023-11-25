@@ -1,6 +1,10 @@
-import React from 'react'
+// eslint-disable-next-line
+
+import React from 'react';
+import { useSelector } from "react-redux";
 
 function Header() {
+  const items = useSelector((state)=>state.cart);
   return (     
           <div>
           
@@ -11,13 +15,13 @@ function Header() {
                 <i class="bx bx-menu icon-single"></i>
             </button>
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <h4 class="font-weight-bold">TR<span className='text-danger'>STORE</span></h4>
     </a>
 
     <ul class="navbar-nav ml-auto d-block d-md-none">
       <li class="nav-item">
-        <a class="btn btn-link" href="#"><i class="bx bxs-cart icon-single"></i> <span class="badge badge-danger">0</span></a>
+        <a class="btn btn-link" href="/"><i class="bx bxs-cart icon-single"></i> <span class="badge badge-danger">10</span></a>
       </li>
     </ul>
 
@@ -29,7 +33,7 @@ function Header() {
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="btn btn-link" href="#"><i class="bx bxs-cart icon-single bx-md"></i> <span class="badge badge-danger">0</span></a>
+          <a class="btn btn-link" href="/cart"><i class="bx bxs-cart icon-single bx-md"></i> <span class="badge badge-danger">{items.length}</span></a>
         </li>
       </ul>
     </div>

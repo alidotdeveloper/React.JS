@@ -12,7 +12,7 @@ function Homesection(props) {
       title: props.title,
       price:props.price
     }
-    console.log("Adding to cart:", product);
+ 
     dispatch(add(product))
   }
   return (
