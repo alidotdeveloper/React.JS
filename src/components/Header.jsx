@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
+
 
 function Header() {
   const items = useSelector((state)=>state.cart);
@@ -15,9 +17,9 @@ function Header() {
                 <i class="bx bx-menu icon-single"></i>
             </button>
 
-    <a class="navbar-brand" href="/">
+    <Link class="navbar-brand" to="/">
       <h4 class="font-weight-bold">TR<span className='text-danger'>STORE</span></h4>
-    </a>
+    </Link>
 
     <ul class="navbar-nav ml-auto d-block d-md-none">
       <li class="nav-item">
@@ -33,7 +35,7 @@ function Header() {
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="btn btn-link" href="/cart"><i class="bx bxs-cart icon-single bx-md"></i> <span class="badge badge-danger">{items.length}</span></a>
+          <Link class="btn btn-link" to="/cart"><i class="bx bxs-cart icon-single bx-md"></i> <span class="badge badge-danger">{items.length}</span></Link>
         </li>
       </ul>
     </div>
