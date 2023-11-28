@@ -8,8 +8,14 @@
 .main-section{
   margin: 50px;
 }
-.product-card{
-  border: 1px solid black !important;
+.cart-wrapper{
+
+  display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+   
 }
 .main-head{
   margin: 25px 0px;
@@ -47,4 +53,10 @@
   .card-details {
     text-align: center; /* Center the text within the container */
     padding: 10px;
+  }
+
+  .product-cart{
+    margin: 15px;
+    border: solid silver 1px;
+    padding: 15px;
   }

@@ -1,12 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Header from './Header';
+import { remove } from '../addtotodo/cart/card-slice';
+
 
 
 const Cart = () => {
+    const dispatch = useDispatch();
+    const handleRemove = ((itemId) => {
+        dispatch(remove(itemId))
+}) 
+
 
     const items = useSelector((state) => state.cart);
-    console.log(items);
+    
 
   return (
       <>
@@ -18,14 +25,14 @@ const Cart = () => {
                   
                   { items.map((item) => {
                       return(
-                          <div className='card-list' >
-                          <img src={item.img} width={200} alt='img'></img>
+                          <div className='card-list'>
+                          <img src={item.images[0]} width={200} alt='img'></img>
                               
                               <div className='card-details'>
                               <h3 className='card-title'>{item.title}</h3>
                                   <p className='price-title'> Price: {item.price} </p>  
                                   <button className='btn btn-light order-btn'>Order Now</button>
-                                  <button className='btn btn-danger'>Remove</button>
+                                  <button className='btn btn-danger'  onClick={()=> handleRemove(item.id)}>Remove</button>
                               
                                   
                               </div>
