@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Header from './Header';
 import { remove } from '../addtotodo/cart/card-slice';
@@ -13,6 +13,7 @@ const Cart = () => {
         dispatch(remove(itemId))
 }) 
 
+    const [total, settotal] = useState();
 
     const items = useSelector((state) => state.cart);
     
@@ -26,22 +27,39 @@ const Cart = () => {
               <div class="row" style={{display: 'inline'}}>
                   
                   { items.map((item) => {
-                      return(
+                      return (
+                          <>
                           <div className='card-list'>
                           <img src={item.images[0]} width={200} alt='img'></img>
                               
                               <div className='card-details'>
                               <h3 className='card-title'>{item.title}</h3>
-                                  <p className='price-title'> Price: {item.price} </p>  
-                                  <button className='btn btn-light order-btn'>Order Now</button>
+                                  <p className='price-title'> ${item.price} </p>  
+                                  
                                   <button className='btn btn-danger'  onClick={()=> handleRemove(item.id)}>Remove</button>
-                              
+                                  
                                   
                               </div>
                              
-                          </div>
+                              
+                             
+                              </div>
+                              
+                              </>
+                           
                       )
                   })}
+
+                 <div className=' text-center border-top align-items-center total'>
+                      <h3 className=''>Total: $
+                          
+                          {items.reduce((acc, item) =>
+                          {
+                              return acc += item.price;
+                          },0 )}
+                      </h3>
+                      <button className='btn btn-danger order-btn text-center '> Checkout</button>
+                  </div>
                 </div>
     </div>
 

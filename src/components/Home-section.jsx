@@ -56,7 +56,7 @@ function Homesection(props) {
             <div key={item.id} className='product-cart'>
               <img src={item.images[0]} width={300} alt="product"></img>
               <h2 className='h2'>{item.title}</h2>
-              <p> Price: {item.price}</p>
+              <p> ${item.price}</p>
               <button className='btn btn-danger' onClick={() => handleAdd(item)}>Add to cart</button>
               </div>
         ))}      

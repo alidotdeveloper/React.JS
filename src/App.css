@@ -29,11 +29,11 @@
   margin: 5px;
  }
  .order-btn{
-  background-color: rgba(0,0,0,.9);
+  background-color: red(0,0,0,.9);
   color: white;
  }
  .order-btn:hover{
-  background-color: black;
+  background-color: red(0,0,0,.6);
   color: white;
  }
 
@@ -59,4 +59,13 @@
     margin: 15px;
     border: solid silver 1px;
     padding: 15px;
+  }
+  .border-top{
+    border-top: 15px solid red;
+    margin-top: 20px;
+   
+  }
+  .total{
+    
+
   }
